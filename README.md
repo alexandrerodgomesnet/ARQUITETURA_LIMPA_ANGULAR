@@ -208,19 +208,21 @@ do usuário executará todos os casos de uso declarados para o usuário.
 
 Criando o user-implementation.repository.ts
 
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { UserEntity } from './entities/user-entity';
-import { UserImplementationRepositoryMapper } from './mappers/user-repository.mapper';
-import { UserRepository } from 'src/domain/repositories/user.repository';
-import { UserModel } from 'src/domain/models/user.model';
+###### import { Observable } from 'rxjs';
+###### import { map } from 'rxjs/operators';
+###### import { Injectable } from '@angular/core';
+###### import { HttpClient } from '@angular/common/http';
+###### import { UserEntity } from './entities/user-entity';
+###### import { UserImplementationRepositoryMapper } from './mappers/user-repository.mapper';
+###### import { UserRepository } from 'src/domain/repositories/user.repository';
+###### import { UserModel } from 'src/domain/models/user.model';
 
 @Injectable({
     providedIn: 'root',
 })
+
 export class UserImplementationRepository extends UserRepository {
+
     userMapper = new UserImplementationRepositoryMapper();
     constructor(private http: HttpClient) {
         super();
@@ -238,7 +240,7 @@ export class UserImplementationRepository extends UserRepository {
     getUserProfile(): Observable<UserModel>{
         return this.http.get<UserEntity>('https://example.com/user').pipe(
             map(this.userMapper.mapFrom));
-    }
+    }    
 }
 
 src/data/repositories/user/user-implementation.repository.ts
