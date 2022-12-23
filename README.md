@@ -176,6 +176,7 @@ import { UserModel } from 'src/domain/models/user.model';
 import { UserEntity } from '../entities/user-entity';
 
 export class UserImplementationRepositoryMapper extends Mapper<UserEntity, UserModel> {
+    
     mapFrom(param: UserEntity): UserModel {
         return {
             id: param.id,
