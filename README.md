@@ -171,9 +171,11 @@ src/data/repositories/user/entities/user-entity.ts
 Agora vamos criar um mapeador para a implementação. 
 O mapeamento mapeará as propriedades de UserModel para UserEntity e vice-versa.
 
-##### import { Mapper } from 'src/base/mapper';
-##### import { UserModel } from 'src/domain/models/user.model';
-##### import { UserEntity } from '../entities/user-entity';
+##### 
+import { Mapper } from 'src/base/mapper';
+import { UserModel } from 'src/domain/models/user.model';
+import { UserEntity } from '../entities/user-entity';
+#####
 
 export class UserImplementationRepositoryMapper extends Mapper<UserEntity, UserModel> {
     
