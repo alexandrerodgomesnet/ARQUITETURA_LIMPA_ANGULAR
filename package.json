@@ -1,0 +1,11 @@
+{
+  "name": "ARQUITETURA_LIMPA_ANGULAR",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^15.0.4",
+    "@angular/core": "^15.0.4",
+    "rxjs": "^7.8.0"
+  }
+}
